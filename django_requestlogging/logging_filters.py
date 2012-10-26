@@ -90,6 +90,9 @@ class RequestFilter(object):
             record.username = user.username
         else:
             record.username = '-'
+        # Cookies
+        COOKIES = getattr(request, 'COOKIES', {})
+        record.uuid = COOKIES.get('uuid', '-')
         # Headers
         META = getattr(request, 'META', {})
         record.remote_addr = META.get('REMOTE_ADDR', '-')

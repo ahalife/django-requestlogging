@@ -4,6 +4,9 @@ django-requestlogging
 This package provides a logging filter and middleware to add
 information about the current request to the logging record.
 
+It is a clone from the project home:
+https://bitbucket.org/trustcentric/django-requestlogging/
+
 
 Installation and Usage
 ----------------------
@@ -36,6 +39,9 @@ formatter string:
 
     ``username``
        The username for the logged-in user.
+
+    ``uuid``
+       The tracking UUID (from cookie) for the current user.
 
 If any of this information cannot be extracted from the current
 request (or there is no current request), a hyphen ``'-'`` is
